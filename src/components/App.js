@@ -46,7 +46,6 @@ function App() {
     const uniqueYear = new Set(yearsMovies);
     const uniques = [...uniqueYear];
     const uniqueOrderYear = uniques.sort();
-    console.log(uniqueOrderYear);
     return uniqueOrderYear;
   };
 
@@ -63,11 +62,12 @@ function App() {
   });
 
   const { pathname } = useLocation();
-  const dataPath = matchPath('/scene/:sceneId', pathname);
-  console.log(dataPath);
+  const dataPath = matchPath('/scene/:id', pathname);
 
-  const sceneId = dataPath !== null ? dataPath.params.sceneId : null;
-  const sceneFound = dataMovies.find((movie) => movie.id === sceneId);
+  const sceneIndex = dataPath !== null ? dataPath.params.id : null;
+  const sceneFound = dataMovies.find(
+    (movie) => movie.id === parseInt(sceneIndex)
+  );
 
   return (
     <>
@@ -88,7 +88,7 @@ function App() {
             }
           />
           <Route
-            path="/scene/:sceneId"
+            path="/scene/:id"
             element={<MovieSceneDetail movie={sceneFound} />}
           />
         </Routes>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 const MovieSceneDetail = (props) => {
   return (
     <section>
@@ -5,6 +6,7 @@ const MovieSceneDetail = (props) => {
       <p>{props.movie.quote}</p>
       <p>{props.movie.director}</p>
       {/* Enlace al audio */}
+      <Link to="/"> Volver</Link>
     </section>
   );
 };

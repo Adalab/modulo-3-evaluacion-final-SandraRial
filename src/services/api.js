@@ -5,7 +5,7 @@ const getDataApi = () => {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      const cleanData = data.map((item) => {
+      const cleanData = data.map((item, index) => {
         return {
           movie: item.movie,
           poster: item.poster,
@@ -13,6 +13,7 @@ const getDataApi = () => {
           year: item.year,
           director: item.director,
           audio: item.audio,
+          id: index,
         };
       });
       console.log(cleanData);
