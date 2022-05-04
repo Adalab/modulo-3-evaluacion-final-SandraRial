@@ -25,11 +25,23 @@ function App() {
     return movie.movie.toLowerCase().includes(filterMovie.toLowerCase());
   });
 
+  const sortFunction = userFilter.sort(function (a, b) {
+    const nameA = a.movie;
+    const nameB = b.movie;
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    return 0;
+  });
+
   return (
     <div>
       <h1>Hola mundo</h1>
       <Filters handleFilterMovie={handleFilterMovie} />
-      <MovieList movies={userFilter} />
+      <MovieList movies={sortFunction} />
     </div>
   );
 }
