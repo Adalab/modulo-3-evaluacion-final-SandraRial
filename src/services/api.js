@@ -9,7 +9,7 @@ const getDataApi = () => {
         return {
           movie: item.movie,
           poster: item.poster,
-          line: item.full_line,
+          quote: item.full_line,
           year: item.year,
           director: item.director,
           audio: item.audio,
