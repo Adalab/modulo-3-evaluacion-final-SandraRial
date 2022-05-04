@@ -1,4 +1,4 @@
-const MovieItem = (props) => {
+const MovieSceneItem = (props) => {
   return (
     <>
       <img
@@ -15,4 +15,4 @@ const MovieItem = (props) => {
   );
 };
 
-export default MovieItem;
+export default MovieSceneItem;

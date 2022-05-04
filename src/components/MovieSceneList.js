@@ -1,10 +1,10 @@
-import MovieItem from './MovieItem';
+import MovieSceneItem from './MovieSceneItem';
 
-const MovieList = (props) => {
+const MovieSceneList = (props) => {
   const movieSceneList = props.movies.map((movie, index) => {
     return (
       <li key={index}>
-        <MovieItem movie={movie} />
+        <MovieSceneItem movie={movie} />
       </li>
     );
   });
@@ -15,4 +15,4 @@ const MovieList = (props) => {
   );
 };
 
-export default MovieList;
+export default MovieSceneList;
