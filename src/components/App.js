@@ -1,5 +1,5 @@
 import '../styles/App.scss';
-// import callToApi from '../services/api';
+//import getDataApi from '../services/api';
 // import { useEffect, useState } from 'react';
 // import ls from '../services/localStorage';
 
