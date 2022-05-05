@@ -29,6 +29,7 @@
             text-align: center;
             margin: 3px;
             color: rgb(6, 48, 107);
+            cursor: pointer;
         }
     }
     &__reset {
@@ -38,5 +39,6 @@
         color: rgb(6, 48, 107);
         border-radius: 1rem;
         border: solid rgb(6, 48, 107);
+        cursor: pointer;
     }
 }

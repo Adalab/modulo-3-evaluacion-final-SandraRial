@@ -110,6 +110,7 @@ function App() {
               </>
             }
           />
+
           <Route
             path="/scene/:id"
             element={<MovieSceneDetail movie={sceneFound} />}

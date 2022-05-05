@@ -4,7 +4,7 @@ const MovieSceneItem = (props) => {
   return (
     <Link to={`/scene/${props.movie.id}`} className="link">
       <img
-        className="list__item--image img"
+        className="list__item--image"
         alt={props.movie.movie}
         src={props.movie.poster}
       />
