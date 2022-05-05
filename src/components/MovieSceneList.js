@@ -14,7 +14,11 @@ const MovieSceneList = (props) => {
   });
   return (
     <section>
-      <ul>{movieSceneList}</ul>
+      {props.movies.length === 0 ? (
+        <p>Cargando lista de escenas...</p>
+      ) : (
+        <ul>{movieSceneList}</ul>
+      )}
     </section>
   );
 };

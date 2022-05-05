@@ -1,15 +1,11 @@
 const FilterMovie = (props) => {
   const handleInputMovie = (ev) => {
     ev.preventDefault();
-    if (props.filterMovie === null) {
-      alert('No hay ninguna escena que coincida con esa palabra');
-    } else {
-      props.handleFilterMovie(ev.target.value);
-    }
+    props.handleFilterMovie(ev.target.value);
   };
   return (
     <>
-      <label htmlFor="">Movie</label>
+      <label htmlFor="findMovie">Movie</label>
       <input
         type="search"
         name="findMovie"

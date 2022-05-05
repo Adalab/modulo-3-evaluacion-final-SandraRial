@@ -80,7 +80,9 @@ function App() {
               <>
                 <Filters
                   handleFilterMovie={handleFilterMovie}
+                  filterMovie={filterMovie}
                   handleFilterYear={handleFilterYear}
+                  filterYear={filterYear}
                   years={getYear()}
                 />
                 <MovieSceneList movies={sortFunction} />
