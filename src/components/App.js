@@ -12,11 +12,13 @@ function App() {
   const [dataMovies, setDataMovies] = useState([]);
   const [filterMovie, setFilterMovie] = useState('');
   const [filterYear, setFilterYear] = useState('all');
+  const [status, setStatus] = useState('Loading');
 
   useEffect(() => {
     if (dataMovies.length === 0) {
       getDataApi().then((data) => {
         setDataMovies(data);
+        setStatus('Loaded');
       });
     }
   });
@@ -91,7 +93,7 @@ function App() {
                   years={getYear()}
                   handleReset={handleReset}
                 />
-                <MovieSceneList movies={sortFunction} />
+                <MovieSceneList movies={sortFunction} status={status} />
               </>
             }
           />
