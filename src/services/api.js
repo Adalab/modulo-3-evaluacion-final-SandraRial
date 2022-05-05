@@ -4,7 +4,6 @@ const getDataApi = () => {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       const cleanData = data.map((item, index) => {
         return {
           movie: item.movie,

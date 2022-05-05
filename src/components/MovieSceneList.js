@@ -1,6 +1,10 @@
 import MovieSceneItem from './MovieSceneItem';
+import MovieSceneNotFound from './MovieSceneNotFound';
 
 const MovieSceneList = (props) => {
+  if (props.movies.length === 0) {
+    return <MovieSceneNotFound movie={props.filterMovie} />;
+  }
   const movieSceneList = props.movies.map((movie, index) => {
     return (
       <li key={index}>
