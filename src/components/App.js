@@ -1,5 +1,6 @@
 import '../styles/App.scss';
 import '../styles/FiltersForm.scss';
+import '../styles/MovieSceneListItems.scss';
 import getDataApi from '../services/api';
 import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';

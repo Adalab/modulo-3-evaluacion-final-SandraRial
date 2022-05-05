@@ -4,13 +4,13 @@ const MovieSceneDetail = (props) => {
     <section>
       <img alt={'Scene'} src={props.movie.poster} />
       <div>
-        <h4>{props.movie.name}</h4>
-        <p>{props.movie.quote}</p>
-        <p>{props.movie.director}</p>
+        <h4>Title: {props.movie.movie}</h4>
+        <p>Quote: {props.movie.quote}</p>
+        <p>Director: {props.movie.director}</p>
         <p>
-          <a href={props.movie.audio}>Escuchar audio</a>
+          <a href={props.movie.audio}>Listen to audio</a>
         </p>
-        <Link to="/"> Volver</Link>
+        <Link to="/"> Back</Link>
       </div>
     </section>
   );

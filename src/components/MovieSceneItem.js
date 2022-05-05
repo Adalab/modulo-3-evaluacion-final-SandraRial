@@ -2,17 +2,19 @@ import { Link } from 'react-router-dom';
 
 const MovieSceneItem = (props) => {
   return (
-    <Link to={`/scene/${props.movie.id}`}>
+    <Link to={`/scene/${props.movie.id}`} className="link">
       <img
-        height={300}
-        width={250}
-        className=""
+        className="list__item--image img"
         alt={props.movie.movie}
         src={props.movie.poster}
       />
-      <h3>{props.movie.movie}</h3>
-      <p>{props.movie.quote}</p>
-      <p>{props.movie.year}</p>
+      <div className="list__item--box">
+        <h3 className="list__item--box--title-year">
+          {props.movie.movie} - {props.movie.year}
+        </h3>
+
+        <p className="list__item--box--quote">{props.movie.quote}</p>
+      </div>
     </Link>
   );
 };

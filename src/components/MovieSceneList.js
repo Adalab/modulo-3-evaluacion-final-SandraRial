@@ -4,7 +4,7 @@ import MovieSceneNotFound from './MovieSceneNotFound';
 const MovieSceneList = (props) => {
   const movieSceneList = props.movies.map((movie, index) => {
     return (
-      <li key={index}>
+      <li key={index} className="list__item">
         <MovieSceneItem movie={movie} />
       </li>
     );
@@ -16,7 +16,7 @@ const MovieSceneList = (props) => {
       ) : props.movies.length === 0 && props.filterMovie !== '' ? (
         <MovieSceneNotFound movie={props.filterMovie} />
       ) : (
-        <ul>{movieSceneList}</ul>
+        <ul className="list">{movieSceneList}</ul>
       )}
     </section>
   );

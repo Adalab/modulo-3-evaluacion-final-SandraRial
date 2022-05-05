@@ -1,0 +1,51 @@
+.list{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-decoration: none;
+    &__item {
+        background-color:rgb(141, 202, 226);
+        height: 360px;
+        width: 185px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 210px, 150px;
+        align-items: center;
+        margin: 6px;
+        padding: 7px;
+        border-radius: 1rem;
+        &--image{
+            display: grid;
+            grid-template-rows: auto;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+            width: 170px;
+            border-radius: 1rem;
+        }
+        &--box{
+            display: grid;
+            grid-row: auto;
+            &--title-year {
+                color: rgb(6, 48, 107);  
+                display: flex;
+                justify-content: center;
+                font-size:medium;
+            }
+            &--quote {
+                color: rgb(12, 100, 137);
+                display: flex;
+                justify-content: center;
+                text-align: center;
+            }
+
+
+        }
+    }
+}
+
+.link {
+    text-decoration: none;
+}
