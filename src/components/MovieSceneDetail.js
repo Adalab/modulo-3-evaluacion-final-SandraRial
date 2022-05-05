@@ -5,7 +5,9 @@ const MovieSceneDetail = (props) => {
       <h4>{props.movie.name}</h4>
       <p>{props.movie.quote}</p>
       <p>{props.movie.director}</p>
-      {/* Enlace al audio */}
+      <p>
+        <a href={props.movie.audio}>Click aquí</a>
+      </p>
       <Link to="/"> Volver</Link>
     </section>
   );

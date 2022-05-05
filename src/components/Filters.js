@@ -2,11 +2,8 @@ import FilterMovie from './FilterMovie';
 import FilterYear from './FilterYear';
 
 const Filters = (props) => {
-  const handleInputSearch = (ev) => {
-    ev.preventDefault();
-  };
   return (
-    <form onSubmit={handleInputSearch}>
+    <form>
       <FilterMovie
         handleFilterMovie={props.handleFilterMovie}
         filterMovie={props.filterMovie}

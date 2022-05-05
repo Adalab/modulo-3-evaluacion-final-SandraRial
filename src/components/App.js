@@ -81,7 +81,6 @@ function App() {
   const sceneFound = dataMovies.find(
     (movie) => movie.id === parseInt(sceneIndex)
   );
-
   return (
     <>
       <h1>Owen Wilson's "wow"</h1>
