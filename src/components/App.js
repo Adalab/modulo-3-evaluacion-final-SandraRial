@@ -1,4 +1,5 @@
 import '../styles/App.scss';
+import '../styles/FiltersForm.scss';
 import getDataApi from '../services/api';
 import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
@@ -22,7 +23,7 @@ function App() {
         setStatus('Loaded');
       });
     }
-  }, []);
+  }, [dataMovies.length, status]);
 
   useEffect(() => {
     ls.set('movies', dataMovies);
@@ -83,8 +84,10 @@ function App() {
   );
   return (
     <>
-      <h1>Owen Wilson's "wow"</h1>
-      <div>
+      <header className="header">
+        <h1>Owen Wilson's "wow"</h1>
+      </header>
+      <main>
         <Routes>
           <Route
             path="/"
@@ -111,7 +114,7 @@ function App() {
             element={<MovieSceneDetail movie={sceneFound} />}
           />
         </Routes>
-      </div>
+      </main>
     </>
   );
 }

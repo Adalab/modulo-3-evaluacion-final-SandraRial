@@ -3,9 +3,17 @@ const FilterYear = (props) => {
     props.handleFilterYear(ev.target.value);
   };
   return (
-    <>
-      <label htmlFor="">Year</label>
-      <select name="" id="" onChange={handleChange} value={props.filterYear}>
+    <div className="form__select">
+      <label htmlFor="filterSelect" className="form__select--label">
+        Year
+      </label>
+      <select
+        name="filterSelect"
+        id="filterSelect"
+        className="form__select--select-year"
+        onChange={handleChange}
+        value={props.filterYear}
+      >
         <option value="all">Todos los años</option>
         {props.years.map((year, index) => {
           return (
@@ -15,7 +23,7 @@ const FilterYear = (props) => {
           );
         })}
       </select>
-    </>
+    </div>
   );
 };
 

@@ -3,7 +3,7 @@ import FilterYear from './FilterYear';
 
 const Filters = (props) => {
   return (
-    <form>
+    <form className="form">
       <FilterMovie
         handleFilterMovie={props.handleFilterMovie}
         filterMovie={props.filterMovie}
@@ -13,7 +13,9 @@ const Filters = (props) => {
         filterYear={props.filterYear}
         years={props.years}
       />
-      <button onClick={props.handleReset}>Reset</button>
+      <button className="form__reset" onClick={props.handleReset}>
+        Reset
+      </button>
     </form>
   );
 };

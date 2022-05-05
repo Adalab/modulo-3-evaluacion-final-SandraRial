@@ -7,17 +7,20 @@ const FilterMovie = (props) => {
     e.key === 'Enter' && e.preventDefault();
   };
   return (
-    <>
-      <label htmlFor="findMovie">Movie</label>
+    <div className="form__filter">
+      <label className="form__filter--label-input" htmlFor="findMovie">
+        Movie
+      </label>
       <input
         type="text"
         name="findMovie"
         id="findMovie"
+        className="form__filter--search-input"
         value={props.filterMovie}
         onKeyDown={handleKeyPress}
         onChange={handleInputMovie}
       />
-    </>
+    </div>
   );
 };
 

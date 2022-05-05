@@ -7,7 +7,7 @@ const MovieSceneItem = (props) => {
         height={300}
         width={250}
         className=""
-        alt={props.movie.name}
+        alt={props.movie.movie}
         src={props.movie.poster}
       />
       <h3>{props.movie.movie}</h3>
