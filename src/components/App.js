@@ -6,22 +6,28 @@ import { matchPath, useLocation } from 'react-router';
 import MovieSceneList from './MovieSceneList';
 import Filters from './Filters';
 import MovieSceneDetail from './MovieSceneDetail';
-// import ls from '../services/localStorage';
+import ls from '../services/localStorage';
 
 function App() {
-  const [dataMovies, setDataMovies] = useState([]);
+  const [dataMovies, setDataMovies] = useState(ls.get('movies', []));
   const [filterMovie, setFilterMovie] = useState('');
   const [filterYear, setFilterYear] = useState('all');
   const [status, setStatus] = useState('Loading');
 
   useEffect(() => {
     if (dataMovies.length === 0) {
+      console.log(status, dataMovies.length);
       getDataApi().then((data) => {
         setDataMovies(data);
         setStatus('Loaded');
       });
     }
-  });
+  }, []);
+
+  useEffect(() => {
+    ls.set('movies', dataMovies);
+    setStatus('Loaded');
+  }, [dataMovies]);
 
   const handleFilterMovie = (value) => {
     setFilterMovie(value);
@@ -93,7 +99,11 @@ function App() {
                   years={getYear()}
                   handleReset={handleReset}
                 />
-                <MovieSceneList movies={sortFunction} status={status} />
+                <MovieSceneList
+                  movies={sortFunction}
+                  status={status}
+                  filterMovie={filterMovie}
+                />
               </>
             }
           />
