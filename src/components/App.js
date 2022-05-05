@@ -29,6 +29,11 @@ function App() {
     setFilterYear(value);
   };
 
+  const handleReset = (ev) => {
+    ev.preventDefault();
+    setFilterMovie('');
+    setFilterYear('all');
+  };
   const userFilter = dataMovies
     .filter((movie) => {
       return movie.movie.toLowerCase().includes(filterMovie.toLowerCase());
@@ -84,6 +89,7 @@ function App() {
                   handleFilterYear={handleFilterYear}
                   filterYear={filterYear}
                   years={getYear()}
+                  handleReset={handleReset}
                 />
                 <MovieSceneList movies={sortFunction} />
               </>

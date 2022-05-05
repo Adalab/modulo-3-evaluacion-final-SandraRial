@@ -13,6 +13,7 @@ const Filters = (props) => {
         filterYear={props.filterYear}
         years={props.years}
       />
+      <button onClick={props.handleReset}>Reset</button>
     </form>
   );
 };
