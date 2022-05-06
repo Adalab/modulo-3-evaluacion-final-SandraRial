@@ -36,7 +36,8 @@ Como bonus, en el localStorage, se pedía:
   del tipo "La escena que buscas no existe".
 
 Como bonus, en la ordenacion de las tarjetas, se pedía:
--Ordenar el listado de escenas alfabéticamente por el nombre de la
-película.
 
-Ejercicio realizado por: Sandra Rial
+- Ordenar el listado de escenas alfabéticamente por el nombre de la
+  película.
+
+# Ejercicio realizado por: Sandra Rial
