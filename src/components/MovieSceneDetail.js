@@ -18,9 +18,7 @@ const MovieSceneDetail = (props) => {
             <p className="detail__box--director">
               Director: {props.movie.director}
             </p>
-
-            <p className="detail__box--audio">
-              <i class="fa-solid fa-volume detail__box--audio--vol"></i>
+            <div>
               <a
                 href={props.movie.audio}
                 target="_blank"
@@ -28,10 +26,11 @@ const MovieSceneDetail = (props) => {
                 className="detail__box--audio "
               >
                 Listen to audio
+                <i className="fa-solid fa-volume-high detail__box--audio--vol"></i>
               </a>
-            </p>
+            </div>
             <Link to="/" className="detail__back">
-              <i class="fa-solid fa-arrow-left detail__back--arrow"></i>
+              <i className="fa-solid fa-arrow-left detail__back--arrow"></i>
               Back
             </Link>
           </div>

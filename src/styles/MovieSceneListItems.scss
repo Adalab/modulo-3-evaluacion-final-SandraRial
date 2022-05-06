@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .list{
     list-style: none;
     display: flex;
@@ -5,33 +11,29 @@
     flex-wrap: wrap;
     justify-content: center;
     text-decoration: none;
+    gap: 10px;
     &__item {
         background-color: rgb(177, 207, 220);
         height: 420px;
-        width: 185px;
+        width: 200px;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 210px, 150px;
-        align-items: center;
-        margin: 6px;
-        padding: 7px;
+        justify-items: center;
+        padding-top: 20px;
+        margin: auto;
+        transition: all 200ms ease-in;
         border-radius: 1rem;
         &:hover {
-            box-shadow: 8px 8px rgb(199, 200, 202);
+            box-shadow:  1px  1px 4px rgb(14, 67, 99),  3px 3px 16px rgb(31, 102, 184);
         }
         &--image{
-            display: grid;
-            grid-template-rows: auto;
-            justify-content: center;
-            align-items: center;
             height: 250px;
             width: 170px;
-            margin-left: 6px;
             border-radius: 1rem;
         }
         &--box{
-            display: grid;
-            grid-row: auto;
+          padding-top: 1px;
+           line-height: 20px;
             &--title-year {
                 color: rgb(6, 48, 107);  
                 display: flex;
@@ -52,6 +54,11 @@
 
 .link {
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
    
 }
 
@@ -86,7 +93,7 @@
         &--title {
             font-size: 30px;
             color: rgb(6, 48, 107);
-            height: 18px;
+            height: 30px;
         }
         &--quote {
             font-size: 20px;
@@ -94,17 +101,21 @@
             display: flex;
             justify-content: space-around;
             text-align: center;
+            padding: 20px;
             color: rgb(4, 69, 97);
 
         }
         &--director {
             font-size: 20px;
             color: rgb(4, 69, 97);
+            height: 40px;
         }
         &--audio {
             font-size: 20px;
             color: rgb(3, 66, 56);
             text-decoration: none;
+            padding: 5px;
+            
             &:hover {
                 cursor: pointer;
                 font-size: 23px;
@@ -112,7 +123,7 @@
             }
             &--vol {
                 font-size: 18px;
-                color: black;
+                color: rgb(3, 66, 56);
             }
         }
     }
@@ -120,6 +131,7 @@
         font-size: 22px;
         color: rgb(6, 48, 107);
         text-decoration: none;
+        margin: 10px;
         &:hover {
             cursor: pointer;
             font-size: 27px;
