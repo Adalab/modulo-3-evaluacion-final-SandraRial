@@ -12,7 +12,7 @@ const MovieSceneList = (props) => {
   return (
     <section>
       {props.status === 'Loading' ? (
-        <p>Cargando lista de escenas...</p>
+        <p className="loading">Cargando lista de escenas...</p>
       ) : props.movies.length === 0 && props.filterMovie !== '' ? (
         <MovieSceneNotFound movie={props.filterMovie} />
       ) : (

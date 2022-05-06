@@ -6,8 +6,8 @@
     justify-content: center;
     text-decoration: none;
     &__item {
-        background-color:rgb(141, 202, 226);
-        height: 360px;
+        background-color: rgb(177, 207, 220);
+        height: 420px;
         width: 185px;
         display: grid;
         grid-template-columns: 1fr;
@@ -17,7 +17,7 @@
         padding: 7px;
         border-radius: 1rem;
         &:hover {
-            box-shadow: 10px 10px rgb(190, 194, 200);
+            box-shadow: 8px 8px rgb(199, 200, 202);
         }
         &--image{
             display: grid;
@@ -26,6 +26,7 @@
             align-items: center;
             height: 250px;
             width: 170px;
+            margin-left: 6px;
             border-radius: 1rem;
         }
         &--box{
@@ -38,7 +39,7 @@
                 font-size:medium;
             }
             &--quote {
-                color: rgb(12, 100, 137);
+                color: rgb(4, 69, 97);
                 display: flex;
                 justify-content: center;
                 text-align: center;
@@ -54,9 +55,15 @@
    
 }
 
+.loading {
+    color: rgb(6, 48, 107);
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
 
 .detail {
-    background-color: rgb(141, 202, 226);
+    background-color: rgb(177, 207, 220);
     height:400px;
     width: 90vw;
     display: flex;
@@ -83,30 +90,60 @@
         }
         &--quote {
             font-size: 20px;
-            color: rgb(12, 100, 137);
+            width: 300px;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            color: rgb(4, 69, 97);
+
         }
         &--director {
             font-size: 20px;
-            color: rgb(12, 100, 137);
+            color: rgb(4, 69, 97);
         }
         &--audio {
             font-size: 20px;
-            color: rgb(8, 92, 80);
+            color: rgb(3, 66, 56);
             text-decoration: none;
             &:hover {
                 cursor: pointer;
                 font-size: 23px;
                 text-decoration: underline;
             }
+            &--vol {
+                font-size: 18px;
+                color: black;
+            }
         }
     }
     &__back {
-        font-size: 20px;
+        font-size: 22px;
         color: rgb(6, 48, 107);
+        text-decoration: none;
         &:hover {
             cursor: pointer;
-            font-size: 22px;
+            font-size: 27px;
             text-decoration: underline;
         }
+        &--arrow {
+            font-size: 18px;
+        }
+    }
+}
+
+.notFound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    &__title {
+        text-transform: uppercase;
+        color: rgb(121, 34, 14);
+        text-decoration: underline;
+    }
+    &__text {
+        color: rgb(8, 56, 95);
+        font-weight: bold;
     }
 }

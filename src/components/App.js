@@ -86,7 +86,7 @@ function App() {
   return (
     <>
       <header className="header">
-        <h1>Owen Wilson's "wow"</h1>
+        <h1>~ Owen Wilson's "wow" ~</h1>
       </header>
       <main>
         <Routes>
