@@ -5,7 +5,7 @@ const MovieSceneNotFound = (props) => {
     <section className="notFound">
       <h4 className="notFound__title">Not found</h4>
       <p className="notFound__text">
-        La búsqueda no coincide con ninguna escena
+        La búsqueda no coincide con {props.filterMovie} ninguna escena
       </p>
       <img src={OwenImage} alt="OwenImage" />
     </section>
